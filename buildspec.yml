@@ -1,26 +1,22 @@
-in footer for every text need a page
-need a space between logo and search box
-make left side
-seraching is not closing
-need to change to catogries in search
-remove location in search
-location must be qatar
-instead if flight need resturant
-update profile
-name,phonenumber,password
-history of reservation
-current reservation
+version: 0.2
 
-no pending reservation direcrt confirmation
+phases:
+  install:
+    commands:
+      - echo "Installing Java Development Kit (JDK)"
+      - apt-get update -y
+      - apt-get install -y default-jdk
 
+  build:
+    commands:
+      - echo "Compiling Java program..."
+      - javac HelloWorld.java
 
-number of rooms
-number of types
+  post_build:
+    commands:
+      - echo "Running the Java program..."
+      - java HelloWorld
 
-after pressing ok it should go on Main page
-
-
-
-
-
-
+artifacts:
+  files:
+    - HelloWorld.class
